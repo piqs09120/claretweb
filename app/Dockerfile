@@ -20,6 +20,7 @@ WORKDIR /var/www/html
 
 COPY . .
 
+RUN rm -f .env
 RUN composer install --no-dev --optimize-autoloader
 RUN npm install
 RUN npm run build
